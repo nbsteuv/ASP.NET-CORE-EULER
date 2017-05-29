@@ -31,7 +31,7 @@ namespace ASP.NET_CORE_EULER
                 .AddJsonFile(env.ContentRootPath + "/config.json")
                 .Build();
 
-            if (configuration.GetValue<bool>("EnableDeveloperExceptions"))
+            if (configuration.GetValue<bool>("FeatureToggles:EnableDeveloperExceptions"))
             {
                 app.UseDeveloperExceptionPage();
             }
