@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 
 namespace ASP.NET_CORE_EULER
 {
@@ -23,10 +24,24 @@ namespace ASP.NET_CORE_EULER
         {
             loggerFactory.AddConsole();
 
-            if (env.IsDevelopment())
+            app.UseExceptionHandler("/error.html");
+
+            var configuration = new ConfigurationBuilder().AddEnvironmentVariables().Build();
+
+            if (configuration.GetValue<bool>("EnableDeveloperExceptions"))
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.Use(async (context, next) =>
+            {
+                if (context.Request.Path.Value.Contains("invalid"))
+                {
+                    throw new Exception("Forced error");
+                }
+
+                await next();
+            });
 
             app.UseFileServer();
         }
