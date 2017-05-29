@@ -26,7 +26,10 @@ namespace ASP.NET_CORE_EULER
 
             app.UseExceptionHandler("/error.html");
 
-            var configuration = new ConfigurationBuilder().AddEnvironmentVariables().Build();
+            var configuration = new ConfigurationBuilder()
+                .AddEnvironmentVariables()
+                .AddJsonFile(env.ContentRootPath + "/config.json")
+                .Build();
 
             if (configuration.GetValue<bool>("EnableDeveloperExceptions"))
             {
