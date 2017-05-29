@@ -1,0 +1,9 @@
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\bin\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.deps.json
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\bin\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.runtimeconfig.json
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\bin\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.runtimeconfig.dev.json
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\bin\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.dll
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\bin\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.pdb
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\obj\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.csprojResolveAssemblyReference.cache
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\obj\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.AssemblyInfo.cs
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\obj\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.dll
+c:\users\nick\documents\visual studio 2017\Projects\ASP.NET-CORE-EULER\ASP.NET-CORE-EULER\obj\Debug\netcoreapp1.1\ASP.NET-CORE-EULER.pdb
