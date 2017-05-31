@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 
-namespace ASP.NET_CORE_EULER
+namespace ASPNET_CORE_EULER
 {
     public class Startup
     {
@@ -17,10 +17,11 @@ namespace ASP.NET_CORE_EULER
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<FeatureToggles>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, FeatureToggles features)
         {
             loggerFactory.AddConsole();
 
@@ -31,7 +32,7 @@ namespace ASP.NET_CORE_EULER
                 .AddJsonFile(env.ContentRootPath + "/config.json")
                 .Build();
 
-            if (configuration.GetValue<bool>("FeatureToggles:EnableDeveloperExceptions"))
+            if (features.EnableDeveloperExceptions)
             {
                 app.UseDeveloperExceptionPage();
             }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ASP.NET_CORE_EULER
+namespace ASPNET_CORE_EULER
 {
     public class Program
     {

@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ASP.NET_CORE_EULER": {
+    "ASPNET_CORE_EULER": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
