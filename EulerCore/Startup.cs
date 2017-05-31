@@ -59,7 +59,7 @@ namespace EulerCore
 
             app.UseMvc(routes =>
             {
-                routes.MapRoute("Default", "{controllersHome}/{action=Index}/{id:int?}");
+                routes.MapRoute("Default", "{controller=Home}/{action=Index}/{id:int?}");
             });
 
             app.UseFileServer();
