@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EulerCore.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
         // GET: /<controller>/
-        public string Index()
+        public IActionResult Index()
         {
-            return "Hello there.";
+            return View();
         }
     }
 }
