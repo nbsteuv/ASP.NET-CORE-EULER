@@ -1,6 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="@Url.Content("~/css/styles.css?v=1.1")" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", false)
+</head>
 
-<link rel="stylesheet" type="text/css" href="../css/styles.css" />
-
+<body>
 @Html.Partial("_Header")
 
 @RenderBody()
+
+
+</body>
+</html>
