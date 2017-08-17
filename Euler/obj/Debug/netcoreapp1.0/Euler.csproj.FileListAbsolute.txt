@@ -1,0 +1,9 @@
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\bin\Debug\netcoreapp1.0\Euler.deps.json
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\bin\Debug\netcoreapp1.0\Euler.runtimeconfig.json
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\bin\Debug\netcoreapp1.0\Euler.runtimeconfig.dev.json
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\bin\Debug\netcoreapp1.0\Euler.dll
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\bin\Debug\netcoreapp1.0\Euler.pdb
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\obj\Debug\netcoreapp1.0\Euler.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\obj\Debug\netcoreapp1.0\Euler.AssemblyInfo.cs
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\obj\Debug\netcoreapp1.0\Euler.dll
+C:\Users\Nick\Documents\Visual Studio 2017\Projects\ASP.NET-CORE-EULER\Euler\obj\Debug\netcoreapp1.0\Euler.pdb
