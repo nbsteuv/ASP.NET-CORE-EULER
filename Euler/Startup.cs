@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using Euler.DBContext;
+using Euler.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Euler
 {
@@ -30,6 +34,8 @@ namespace Euler
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<EulerDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<EulerDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,9 +48,17 @@ namespace Euler
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvcWithDefaultRoute();
+            try
+            {
+                app.UseIdentity();
 
-            app.UseFileServer();
+                app.UseMvcWithDefaultRoute();
+
+                app.UseFileServer();
+            } catch(Exception ex)
+            {
+
+            }
 
             app.Run(async (context) =>
             {
