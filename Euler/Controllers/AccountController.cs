@@ -20,9 +20,39 @@ namespace Euler.Controllers
             _signInManager = signInManager;
         }
 
+        [HttpGet]
         public IActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel loginViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var loginResult = await _signInManager.PasswordSignInAsync(loginViewModel.Username, loginViewModel.Password, loginViewModel.RememberMe, false);
+                if (loginResult.Succeeded)
+                {
+                    if (Url.IsLocalUrl(loginViewModel.ReturnUrl))
+                    {
+                        return Redirect(loginViewModel.ReturnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Login failed. Please try again.");
+                    return View(loginViewModel);
+                }
+            }
+            else
+            {
+                return View(loginViewModel);
+            }
         }
 
         [HttpGet]
@@ -56,6 +86,13 @@ namespace Euler.Controllers
                 }
             }
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -54,10 +54,10 @@ namespace Euler
 
             app.UseFileServer();
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync(Configuration["TestHello"]);
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync(Configuration["TestHello"]);
+            //});
         }
     }
 }
