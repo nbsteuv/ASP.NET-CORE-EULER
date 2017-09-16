@@ -48,17 +48,11 @@ namespace Euler
                 app.UseDeveloperExceptionPage();
             }
 
-            try
-            {
-                app.UseIdentity();
+            app.UseIdentity();
 
-                app.UseMvcWithDefaultRoute();
+            app.UseMvcWithDefaultRoute();
 
-                app.UseFileServer();
-            } catch(Exception ex)
-            {
-
-            }
+            app.UseFileServer();
 
             app.Run(async (context) =>
             {

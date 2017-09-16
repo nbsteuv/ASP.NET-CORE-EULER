@@ -1,1 +1,8 @@
 ﻿<h2>Successful login</h2>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>You have been authenticated.</p>
+} else {
+    <p>This message should never appear if the authentication attribute is on the route</p>
+}
